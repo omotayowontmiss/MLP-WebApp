@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>MLP Prediction Web App</title>
+</head>
+<body>
+
+<h2>MLP Predictive Analysis</h2>
+
+<form method="POST">
+    {% for i in range(10) %}
+        Feature {{i+1}}:
+        <input type="text" name="feature{{i}}" required><br><br>
+    {% endfor %}
+
+    <button type="submit">Predict</button>
+</form>
+
+{% if prediction %}
+    <h3>Prediction: {{prediction}}</h3>
+{% endif %}
+
+</body>
+</html>
