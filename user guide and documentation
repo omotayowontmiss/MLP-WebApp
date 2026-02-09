@@ -1,0 +1,67 @@
+This system is an AI powered web application that performs predictive analysis using a Multilayer Perceptron (ML) neural network. 
+The model is trained on the diabetes dataset and deployed through a Flask web interface that allows users to input feature values and receive real time predictions 
+The System consists of two major components:
+- Machine Learning Model (MLP)
+Web Application Interface (Flask)
+
+The deployed system follows this structure 
+
+User Browser 
+      |
+Flask Web App (app.py)
+      |
+MLP Model Engine (mlp_model.py)
+      |
+Prediction Output
+
+The web interface collects user input and sends it to the trained MLP model, which returns a predicted value. 
+
+
+Project File Structure 
+MLP_WebApp/
+│
+├── app.py              → Flask web controller
+├── mlp_model.py        → AI model + prediction logic
+├── requirements.txt    → Dependency list
+└── templates/
+    └── index.html      → Web interface page
+
+File Descriptions 
+app.py
+- controls the web server
+- receives form inputs
+- calls the prediction function 
+- displays results in browser 
+
+mlp_model.py
+- loads dataset
+- scales features 
+- trains mlp model
+- provides predoct() function used by web app
+
+index.html
+- user interface form 
+- contains 10 feature input fields 
+- displays prediction result 
+
+requirements.txt 
+lists required packages for installation and deployment 
+
+Installation Instructions (Local Run)
+-install python 3.10 or newer 
+- install dependencies 
+    pip install flask numy scikit-learn gunicorn
+- run the application
+    python app.py
+- open browser 
+    https://127.0.0.1:5000 (the address it gives you after you run)
+
+How to use the Web Application 
+- Open the web page 
+- enter numeric values in all 10 feature fields 
+- click predict 
+- the predicted value will be displayed 
+
+
+
+
